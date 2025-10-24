@@ -51,10 +51,10 @@ media/                 # User-uploaded files (resumes)
 
 ## Admin Panel Access
 - **URL:** `/admin/`
-- **Username:** `admin`
-- **Password:** `admin123`
+- **Default Username:** `admin` (created for development)
+- **Default Password:** Please create your own secure password using `python manage.py createsuperuser`
 
-**Important:** Change admin credentials for production use!
+**Important:** For security, you should create your own admin account with a strong password. Delete the default admin account after creating your own.
 
 ## How to Update Resume
 1. Go to `/admin/` and login
@@ -116,6 +116,14 @@ media/                 # User-uploaded files (resumes)
 - Media files served from `/media/` directory
 - ALLOWED_HOSTS set to '*' for development (restrict in production)
 - SQLite database used (consider PostgreSQL for production)
+- SECRET_KEY uses SESSION_SECRET environment variable (falls back to dev key if not set)
+- DEBUG mode controlled by DEBUG environment variable (defaults to True for development)
+
+## Security Configuration
+- **SECRET_KEY:** Uses `SESSION_SECRET` environment variable in production
+- **DEBUG:** Set `DEBUG=False` environment variable for production deployment
+- **Admin Credentials:** Always create unique admin credentials, never use defaults
+- **ALLOWED_HOSTS:** Update to specific domains when deploying to production
 
 ## User Preferences
 - Language: Hindi/English mix (conversational)
