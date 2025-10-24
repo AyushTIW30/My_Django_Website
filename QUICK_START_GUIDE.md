@@ -2,7 +2,7 @@
 
 ## Aapka Portfolio Taiyar Hai! 🎉
 
-Aapka professional Django portfolio website ab fully ready hai with green theme aur sabhi features!
+Aapka professional Django portfolio website ab fully ready hai with green theme, dark mode, confetti animations aur sabhi features!
 
 ## Website Pages
 
@@ -40,10 +40,37 @@ python manage.py createsuperuser
    - Project Link
    - Order number (lower numbers pehle dikhenge)
 
-## Color Theme
+## New Features! ✨
+
+### 🎊 Confetti Animation
+- Navbar buttons pe click karne par beautiful confetti effect aata hai (HackerRank jaisa!)
+- Green theme colors mein confetti spray hota hai
+- Theme toggle karne par bhi confetti animation milegi
+
+### 🌓 Dark Mode Toggle
+- Top right corner mein moon/sun icon pe click karke dark/light mode switch karo
+- Your preference automatically save hota hai (localStorage mein)
+- Dark mode mein colors:
+  - Background: Dark gray (#1a1a1a)
+  - Cards: Medium gray (#2d2d2d)
+  - Text: Light gray
+  - Green accents maintained
+
+### 📄 Resume Link
+- Aapka Google Drive resume link ab database mein hai
+- Resume page pe "Download Resume" button se directly download kar sakte ho
+- Link: https://drive.google.com/file/d/138MxrJGnnoEyzc_R3mFsdT80SWy2Wa9B/view
+
+## Color Theme (Light Mode)
 - **Dark Green:** #008060 (Main color)
 - **Light Green:** #00a97f (Buttons, highlights)
 - **Background:** #e9fff1 (Light green background)
+
+## Color Theme (Dark Mode)
+- **Dark Green:** #00a97f (Main color)
+- **Light Green:** #00c896 (Buttons, highlights)
+- **Background:** #1a1a1a (Dark background)
+- **Cards:** #2d2d2d (Medium gray)
 
 ## Technical Details
 - **Framework:** Django 5.2.7
