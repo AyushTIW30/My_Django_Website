@@ -1,0 +1,240 @@
+🌿 Django Portfolio Website – Complete Guide (By Ayush Tiwari)
+📘 Overview
+
+This project is a personal portfolio website built using Django.
+It contains 4 main sections:
+
+🏠 Home
+
+📄 Resume
+
+💻 Projects
+
+📬 Contact
+
+The goal is to create a clean and professional portfolio where you can showcase your skills, projects, and contact details — all in one place.
+We’ll deploy this project using Replit.
+
+⚙️ Step 1 — Project Setup
+
+Open Replit.com
+.
+
+Click “Create Repl” → Search Django → Select Template.
+
+Give your project name, e.g. portfolio.
+
+Wait till Replit installs Django automatically.
+
+Once the environment is ready, you’ll see a few default files like:
+
+manage.py
+portfolio/
+home/
+
+🧱 Step 2 — Create an App
+
+Inside Replit shell, type:
+
+python manage.py startapp home
+
+
+This creates a new app folder named home which will handle all portfolio pages.
+
+Now go to settings.py and add "home" inside INSTALLED_APPS.
+
+🧭 Step 3 — Create URLs for Navigation
+
+Inside your home app, create a file named urls.py and connect it to main urls.py.
+
+We will make routes for:
+
+/ → Home
+
+/resume → Resume
+
+/projects → Projects
+
+/contact → Contact
+
+This allows us to navigate easily between pages.
+
+🏗️ Step 4 — Create Views for Each Page
+
+In home/views.py, create 4 simple functions:
+
+home() → displays introduction
+
+resume() → shows resume link
+
+projects() → displays project cards
+
+contact() → shows social links (email, GitHub, LinkedIn, LeetCode)
+
+Each function will render a different HTML template.
+
+🖼️ Step 5 — Make HTML Templates
+
+Now create a folder:
+
+home/templates/home/
+
+
+Inside it, make 4 HTML files:
+
+index.html → for Home page
+
+resume.html → for Resume section
+
+projects.html → for Projects
+
+contact.html → for Contact
+
+Use a base.html for common navbar, footer, and styling.
+
+Each section will extend base.html using {% extends 'home/base.html' %}.
+
+🎨 Step 6 — Add Design (Green Theme)
+
+We’ll make a green-themed layout with clean modern typography using Poppins font.
+Main design elements:
+
+Sticky navbar (Home | Resume | Projects | Contact)
+
+Section-based layout
+
+Green buttons and highlights
+
+Responsive cards for project display
+
+You can store CSS inside:
+
+static/css/style.css
+
+
+The color palette:
+
+Dark Green: #008060
+
+Light Green: #00a97f
+
+Background: #e9fff1
+
+📄 Step 7 — Home Section
+
+The Home section introduces Ayush Tiwari with:
+
+A short intro line (developer, skills)
+
+Social links (GitHub, LinkedIn, LeetCode)
+
+A friendly greeting (👋)
+
+Purpose: give the visitor a quick idea of who you are and what you do.
+
+📃 Step 8 — Resume Section
+
+This section contains:
+
+A brief note like “You can download my resume below”
+
+A button linking to your actual Google Drive resume
+
+Example:
+
+https://drive.google.com/file/d/1R4R4Yb_AyushResumeLink
+
+
+(Replace it with your actual resume link.)
+
+💻 Step 9 — Projects Section
+
+This is one of the most important parts of your portfolio.
+We’ll use cards layout to showcase each project with title, short description, and link.
+
+Example projects:
+
+Fabric Optimizer
+
+A web app that optimizes fabric usage in clothing production.
+
+🔗 https://fabricoptamizer.onrender.com
+
+Lost and Found Portal
+
+A Django-based portal for reporting and finding lost items.
+
+🔗 https://lost-and-found-377u.onrender.com
+
+Bangalore House Price Prediction
+
+A machine learning project predicting property prices using Python and scikit-learn.
+
+🔗 https://github.com/AyushTIW30/Bangalore-House-Price-Prediction
+
+📬 Step 10 — Contact Section
+
+This section displays your contact and profile links:
+
+📧 Email: ayushtiwariatcoon@gmail.com
+
+📞 Phone: +91 8305117567
+
+💻 GitHub: github.com/AyushTIW30
+
+🔗 LinkedIn: linkedin.com/in/ayush-tiwari-2301222ba
+
+🧠 LeetCode: leetcode.com/u/AyushTIW30
+
+Make these clickable links with icons or styled buttons for a clean look.
+
+🌐 Step 11 — Run & Test on Replit
+
+Go to the Shell in Replit.
+
+Run migrations:
+
+python manage.py migrate
+
+
+Start your server:
+
+python manage.py runserver
+
+
+You’ll get a Replit URL like:
+https://portfolio-yourusername.repl.co
+
+Open it in your browser to see your live Django portfolio website!
+
+💚 Step 12 — Final Touches
+
+Add favicon & title (Ayush Tiwari | Portfolio)
+
+Add footer: “Made with 💚 by Ayush Tiwari”
+
+Use green hover effects for links
+
+Add slight animation for scroll-up or hover cards (optional)
+
+🚀 Optional — Deployment
+
+Since Replit already gives a public URL, it’s auto-hosted.
+But if you want more control, you can also deploy this on Railway or Render in the future.
+
+🧩 Summary
+Section	Purpose	Key Features
+🏠 Home	Intro about you	Name, skills, social links
+📄 Resume	Showcase your CV	Google Drive link, download button
+💻 Projects	Display your work	Project cards with links
+📬 Contact	Connect with you	Email, LinkedIn, GitHub, LeetCode
+✨ Final Words
+
+This project will represent Ayush Tiwari as a skilled developer with clean presentation and working links to real projects.
+It’s simple, responsive, and perfect for college, internships, or resume portfolios.
+
+Bhai, ye poora document tu copy karke ek .docx ya .md file me rakh le —
+fir Replit me step by step follow karega toh tera portfolio mast professional ban jayega 😎
+
+Chahe toh mai is doc ko Word (.docx) file format me bana ke de du — ready to download version.
+Bata bhai, chahiye kya Word version ready?
