@@ -1,0 +1,92 @@
+{% extends 'home/base.html' %}
+
+{% block title %}Projects | Ayush Tiwari{% endblock %}
+
+{% block content %}
+<section class="projects-section">
+    <div class="container">
+        <h1 class="page-title">My Projects</h1>
+        <p class="page-subtitle">Here are some of my recent projects showcasing my skills in web development, data science, and problem-solving.</p>
+        
+        <div class="projects-grid">
+            {% if projects %}
+                {% for project in projects %}
+                <div class="project-card">
+                    <h3 class="project-title">{{ project.title }}</h3>
+                    <p class="project-tech">{{ project.tech_stack }}</p>
+                    <p class="project-description">{{ project.description }}</p>
+                    <a href="{{ project.link }}" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> View Project
+                    </a>
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="project-card">
+                    <h3 class="project-title">Fabric Optimizer</h3>
+                    <p class="project-tech">Django, Python, HTML, CSS, SQLite</p>
+                    <p class="project-description">
+                        A smart web app designed to help manufacturers and designers calculate and optimize 
+                        fabric usage efficiently. It minimizes material wastage using logical algorithms and 
+                        mathematical models.
+                    </p>
+                    <a href="https://fabricoptamizer.onrender.com" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> View Project
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">Lost and Found Portal</h3>
+                    <p class="project-tech">Django, HTML, CSS, Bootstrap, SQLite</p>
+                    <p class="project-description">
+                        A platform where users can report lost or found items. It allows posting item details, 
+                        uploading images, and checking matches through a dynamic Django interface. Solves real-world 
+                        problems of item loss on campuses and public areas.
+                    </p>
+                    <a href="https://lost-and-found-377u.onrender.com" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> View Project
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">Bangalore House Price Prediction</h3>
+                    <p class="project-tech">Python, Pandas, NumPy, Scikit-Learn, Matplotlib</p>
+                    <p class="project-description">
+                        Developed a predictive machine learning model to estimate house prices in Bangalore using 
+                        real estate data. Features include data cleaning, feature engineering, regression models, 
+                        and visual insights for accurate price predictions.
+                    </p>
+                    <a href="https://github.com/AyushTIW30/Bangalore-House-Price-Prediction" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> View Project
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">ATM Simulation System</h3>
+                    <p class="project-tech">Python</p>
+                    <p class="project-description">
+                        Simulates basic ATM operations such as balance check, cash withdrawal, deposit, and PIN 
+                        validation. A pure Python-based CLI app with interactive menu navigation, secure authentication, 
+                        and transaction history tracking.
+                    </p>
+                    <a href="https://github.com/AyushTIW30" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> View Project
+                    </a>
+                </div>
+
+                <div class="project-card">
+                    <h3 class="project-title">Fun Games in Python</h3>
+                    <p class="project-tech">Python (Turtle, Random, Math modules)</p>
+                    <p class="project-description">
+                        Collection of mini Python games demonstrating logic, user interaction, and creativity. 
+                        Includes Hangman, BMI Meter, Love Meter, Tic-Tac-Toe, Turtle Race, and Motion Sensor Jump Game. 
+                        Features both GUI-based and command-line games.
+                    </p>
+                    <a href="https://github.com/AyushTIW30" target="_blank" class="project-link">
+                        <i class="fas fa-external-link-alt"></i> View Project
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+{% endblock %}

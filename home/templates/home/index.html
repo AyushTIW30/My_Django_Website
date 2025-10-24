@@ -1,0 +1,54 @@
+{% extends 'home/base.html' %}
+
+{% block title %}Home | Ayush Tiwari{% endblock %}
+
+{% block content %}
+<section class="hero-section">
+    <div class="container">
+        <div class="hero-content">
+            <h1 class="greeting">Hey there! 👋</h1>
+            <h2 class="intro-title">I'm <span class="highlight">Ayush Tiwari</span></h2>
+            <p class="intro-subtitle">Python Developer | Data Analyst | Problem Solver</p>
+            <p class="intro-description">
+                I'm a passionate developer skilled in building innovative solutions using Python, Django, 
+                Data Science, and Machine Learning. I love creating impactful web applications and 
+                data-driven projects that solve real-world problems.
+            </p>
+            
+            <div class="skills-section">
+                <h3>Technical Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Programming</h4>
+                        <p>Python, JavaScript, HTML, CSS</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Frameworks</h4>
+                        <p>Django, FastAPI</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Data Science</h4>
+                        <p>NumPy, Pandas, Matplotlib, Scikit-Learn</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Tools</h4>
+                        <p>Git, Power BI, MySQL, VS Code</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://github.com/AyushTIW30" target="_blank" class="social-btn">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/ayush-tiwari-2301222ba" target="_blank" class="social-btn">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://leetcode.com/u/AyushTIW30/" target="_blank" class="social-btn">
+                    <i class="fas fa-code"></i> LeetCode
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

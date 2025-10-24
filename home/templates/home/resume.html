@@ -1,0 +1,55 @@
+{% extends 'home/base.html' %}
+
+{% block title %}Resume | Ayush Tiwari{% endblock %}
+
+{% block content %}
+<section class="resume-section">
+    <div class="container">
+        <h1 class="page-title">Resume</h1>
+        
+        <div class="resume-content">
+            <div class="profile-summary">
+                <h2>About Me</h2>
+                <p>
+                    I am a passionate Python Developer and Data Analyst skilled in developing innovative 
+                    solutions using Python, Django, Data Science, and Machine Learning. My journey combines 
+                    analytical thinking, problem-solving, and real-world application building.
+                </p>
+            </div>
+
+            <div class="education">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <h3>B.Tech in Information Technology</h3>
+                    <p class="institution">Baderi Global Institute of Engineering and Management, Satna</p>
+                    <p class="duration">2022 - 2026 | RGPV University</p>
+                </div>
+            </div>
+
+            <div class="certifications">
+                <h2>Certifications</h2>
+                <ul class="cert-list">
+                    <li><i class="fas fa-certificate"></i> IBM - Prompt Engineering for Everyone</li>
+                    <li><i class="fas fa-certificate"></i> Microsoft - Copilot Fundamentals</li>
+                    <li><i class="fas fa-certificate"></i> Cognitive Class - Python for Data Science</li>
+                    <li><i class="fas fa-certificate"></i> Cognitive Class - Data Analysis with Python</li>
+                    <li><i class="fas fa-certificate"></i> Cognitive Class - Data Visualization with Python</li>
+                    <li><i class="fas fa-certificate"></i> Microsoft Learn - Azure Fundamentals (in progress)</li>
+                </ul>
+            </div>
+
+            <div class="resume-download">
+                <h2>Download Resume</h2>
+                <p>You can download my complete resume below:</p>
+                {% if resume and resume.get_resume_url %}
+                    <a href="{{ resume.get_resume_url }}" target="_blank" class="download-btn">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                {% else %}
+                    <p class="note">Resume will be available soon. Please check back later or contact me directly.</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
